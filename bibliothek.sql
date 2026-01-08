@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Erstellungszeit: 12. Dez 2025 um 09:16
+-- Erstellungszeit: 19. Dez 2025 um 11:34
 -- Server-Version: 10.4.32-MariaDB
 -- PHP-Version: 8.2.12
 
@@ -89,7 +89,6 @@ CREATE TABLE `buch` (
 INSERT INTO `buch` (`isbn`, `titel`, `autor`, `verlag`, `kategorien`, `preis`, `status`) VALUES
 ('978-3-16-148410-0', 'Der Schatten des Windes', 'Carlos Ruiz Zafón', 'Fischer Verlag', 'Roman, Thriller', 14.99, 'verfügbar'),
 ('978-3-423-21645-2', 'Die Physiker', 'Friedrich Dürrenmatt', 'Diogenes Verlag', 'Drama, Klassiker', 9.95, 'verfügbar'),
-('978-3-442-47172-3', 'Harry Potter und der Stein der Weisen', 'J.K. Rowling', 'Carlsen Verlag', 'Fantasy, Jugendbuch', 16.99, 'reserviert'),
 ('978-3-499-26744-0', 'Der Alchimist', 'Paulo Coelho', 'Ullstein Verlag', 'Roman, Philosophie', 12.50, 'ausgeliehen'),
 ('978-3-518-42902-7', 'Die Verwandlung', 'Franz Kafka', 'Suhrkamp Verlag', 'Novelle, Klassiker', 9.50, 'ausgeliehen'),
 ('978-3-518-45623-1', 'Eine kurze Geschichte der Menschheit', 'Yuval Noah Harari', 'C.H. Beck', 'Sachbuch, Geschichte', 19.90, 'verfügbar'),
