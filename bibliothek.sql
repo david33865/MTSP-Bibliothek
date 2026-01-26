@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Erstellungszeit: 12. Dez 2025 um 09:16
+-- Erstellungszeit: 19. Jan 2026 um 21:17
 -- Server-Version: 10.4.32-MariaDB
--- PHP-Version: 8.2.12
+-- PHP-Version: 8.0.30
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -42,8 +42,12 @@ CREATE TABLE `ausleihen` (
 --
 
 INSERT INTO `ausleihen` (`ausleihen_id`, `nutzer_id`, `isbn`, `bibliothekar_id`, `datum`, `rueckgabedatum`, `leihstatus`) VALUES
-(1, 1, '978-3-551-35400-5', 1, '2025-12-01', '2025-12-15', 'ausgeliehen'),
-(2, 2, '978-3-518-42902-7', 1, '2025-11-20', '2025-12-05', 'zurückgegeben');
+(2, 1, '978-3-551-35400-5', 1, '2025-12-01', '2026-01-09', 'zurückgegeben'),
+(15, 2, '978-3-518-45623-1', 1, '2026-01-18', '2026-01-18', 'zurückgegeben'),
+(16, 2, '978-3-551-35400-2', 1, '2026-01-18', '2026-01-18', 'zurückgegeben'),
+(17, 1, '978-3-518-45623-1', 1, '2026-01-18', '2026-01-18', 'zurückgegeben'),
+(18, 2, '978-3-551-35400-5', 1, '2026-01-18', '2026-01-18', 'zurückgegeben'),
+(19, 2, '978-3-518-45623-1', 1, '2026-01-18', '2026-01-19', 'zurückgegeben');
 
 -- --------------------------------------------------------
 
@@ -87,13 +91,9 @@ CREATE TABLE `buch` (
 --
 
 INSERT INTO `buch` (`isbn`, `titel`, `autor`, `verlag`, `kategorien`, `preis`, `status`) VALUES
-('978-3-16-148410-0', 'Der Schatten des Windes', 'Carlos Ruiz Zafón', 'Fischer Verlag', 'Roman, Thriller', 14.99, 'verfügbar'),
-('978-3-423-21645-2', 'Die Physiker', 'Friedrich Dürrenmatt', 'Diogenes Verlag', 'Drama, Klassiker', 9.95, 'verfügbar'),
-('978-3-442-47172-3', 'Harry Potter und der Stein der Weisen', 'J.K. Rowling', 'Carlsen Verlag', 'Fantasy, Jugendbuch', 16.99, 'reserviert'),
-('978-3-499-26744-0', 'Der Alchimist', 'Paulo Coelho', 'Ullstein Verlag', 'Roman, Philosophie', 12.50, 'ausgeliehen'),
-('978-3-518-42902-7', 'Die Verwandlung', 'Franz Kafka', 'Suhrkamp Verlag', 'Novelle, Klassiker', 9.50, 'ausgeliehen'),
-('978-3-518-45623-1', 'Eine kurze Geschichte der Menschheit', 'Yuval Noah Harari', 'C.H. Beck', 'Sachbuch, Geschichte', 19.90, 'verfügbar'),
-('978-3-551-35400-5', 'Harry Potter und der Stein der Weisen', 'J.K. Rowling', 'Carlsen Verlag', 'Fantasy, Jugendbuch', 19.99, 'verfügbar');
+('978-3-518-45623-1', 'Eine kurze Geschichte der Menschheit', 'Yuval Noah Harari', 'C.H. Beck', 'Sachbuch, Geschichte', 19.50, 'verfügbar'),
+('978-3-551-35400-2', 'test', 'test', 'test', NULL, 1.00, 'verfügbar'),
+('978-3-551-35400-5', 'Harry Potter und der Stein der Weisen', 'J.K. Rowling', 'Carlsen Verlag', 'Fantasy, Jugendbuch', 19.97, 'verfügbar');
 
 -- --------------------------------------------------------
 
@@ -148,6 +148,16 @@ ALTER TABLE `buch`
 ALTER TABLE `nutzer`
   ADD PRIMARY KEY (`nutzer_id`),
   ADD UNIQUE KEY `email` (`email`);
+
+--
+-- AUTO_INCREMENT für exportierte Tabellen
+--
+
+--
+-- AUTO_INCREMENT für Tabelle `ausleihen`
+--
+ALTER TABLE `ausleihen`
+  MODIFY `ausleihen_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- Constraints der exportierten Tabellen
